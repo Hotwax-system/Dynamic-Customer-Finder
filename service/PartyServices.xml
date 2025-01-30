@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+
+    <!-- Service for the FindCustomer -->
+    <service verb="fetch" noun="FindCustomerView" type="script" location="component://Foundation/script/FindCustomer.groovy">
+        <in-parameters>
+            <parameter name="emailAddress"/>
+            <parameter name="firstName" />
+            <parameter name="lastName" />
+            <parameter name="contactNumber" />
+            <parameter name="postalAddress" />
+            <parameter name="pageIndex" />
+        </in-parameters>
+        <out-parameters>
+            <parameter name="datalist" />
+        </out-parameters>
+    </service>
+
+    <!-- Service for Creation of the Customer -->
+    <service verb="create" noun="CreateCustomer" type="script" location="component://Foundation/script/CreateCustomer.groovy">
+        <in-parameters>
+            <parameter name="emailAddress" />
+            <parameter name="firstName" />
+            <parameter name="lastName" />
+        </in-parameters>
+        <out-parameters>
+            <parameter name="el" />
+        </out-parameters>
+    </service>
+
+    <!-- Service for update the Customer -->
+    <service verb="store" noun="UpdateCustomer" type="script" location="component://Foundation/script/UpdateCustomer.groovy">
+        <in-parameters>
+            <parameter name="emailAddress" />
+            <parameter name="address1" />
+            <parameter name="address2" />
+            <parameter name="city" />
+            <parameter name="postalCode" />
+            <parameter name="state" />
+            <parameter name="contactNumber" />
+        </in-parameters>
+    </service>
+
+
+</services>
