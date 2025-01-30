@@ -19,13 +19,18 @@ if (emailAddress) {
 EntityValue ev = ef.one()
 
 if (ev != null) {
-    EntityValue partyContactMechEntityu = ec.entity.find('PartyContactMech')
+    EntityList partyContactMechEntityu = ec.entity.find('PartyContactMech')
         .condition('contactMechId', ev.contactMechId)
-        .one()
+        .condition('contactMechPurposeEnumId',EntityCondition.NOT_EQUAL,'EmailPrimary')
+        .list()
 
     if (partyContactMechEntityu != null) {
-        partyContactMechEntityu.set('thruDate', currentDate)
-        partyContactMechEntityu.update()
+        
+        for(EntityValue ee in partyContactMechEntityu)
+        {
+            ee.set('thruDate',currentDate)
+            ee.update()
+        }
     }
 
     def contactMechId = contactMechEntity.get('contactMechId')
