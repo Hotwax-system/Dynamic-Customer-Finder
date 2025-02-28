@@ -2,7 +2,7 @@
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
 
     <!-- Service for the FindCustomer -->
-    <service verb="fetch" noun="FindCustomerView" type="script" location="component://Foundation/script/FindCustomer.groovy">
+    <service verb="fetch" noun="CustomerView" type="script" location="component://Foundation/script/FindCustomer.groovy">
         <in-parameters>
             <parameter name="emailAddress"/>
             <parameter name="firstName" />
@@ -17,7 +17,7 @@
     </service>
 
     <!-- Service for Creation of the Customer -->
-    <service verb="create" noun="CreateCustomer" type="script" location="component://Foundation/script/CreateCustomer.groovy">
+    <service verb="create" noun="Customer" type="script" location="component://Foundation/script/CreateCustomer.groovy">
         <in-parameters>
             <parameter name="emailAddress" />
             <parameter name="firstName" />
@@ -29,7 +29,7 @@
     </service>
 
     <!-- Service for update the Customer -->
-    <service verb="store" noun="UpdateCustomer" type="script" location="component://Foundation/script/UpdateCustomer.groovy">
+    <service verb="store" noun="Customer" type="script" location="component://Foundation/script/UpdateCustomer.groovy">
         <in-parameters>
             <parameter name="emailAddress" />
             <parameter name="address1" />
