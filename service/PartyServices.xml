@@ -24,7 +24,7 @@
             <parameter name="lastName" />
         </in-parameters>
         <out-parameters>
-            <parameter name="el" />
+            <parameter name="datalist"/>
         </out-parameters>
     </service>
 

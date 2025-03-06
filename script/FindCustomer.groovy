@@ -23,11 +23,9 @@ if (contactNumber) { ef.condition('contactNumber', EntityCondition.EQUALS, conta
 if (postalAddress) { ef.condition('postalCode', EntityCondition.EQUALS, postalAddress) }
 
 if(pageIndex){
-    
 ef.offset(pageIndex as int,pageSize as int)
 ef.limit(pageSize as int)
 }
-
 
 datalist = []
 ef.orderBy("firstName,lastName")

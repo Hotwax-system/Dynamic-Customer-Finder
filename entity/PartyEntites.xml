@@ -111,9 +111,9 @@
         <!-- Seed data -->
         <seed-data>
             <!-- Seed data for the Purpose -->
-            <moqui.basic.ContactMechPurpose description="PhonePrimary" contactMechPurposeId="PhonePrimary"/>
-            <moqui.basic.ContactMechPurpose description="PostalPrimary" contactMechPurposeId="PostalPrimary"/>
-            <moqui.basic.ContactMechPurpose description="EmailPrimary" contactMechPurposeId="EmailPrimary"/>
+            <Moqui.Party.ContactMechPurpose description="PhonePrimary" contactMechPurposeId="PhonePrimary"/>
+            <Moqui.Party.ContactMechPurpose description="PostalPrimary" contactMechPurposeId="PostalPrimary"/>
+            <Moqui.Party.ContactMechPurpose description="EmailPrimary" contactMechPurposeId="EmailPrimary"/>
         </seed-data>
     </entity>
 
@@ -121,7 +121,7 @@
     <!-- Entity for the Contact Mech -->
     <entity entity-name="ContactMech" package="Moqui.Party">
         <field name="contactMechId" type="id" is-pk="true" />
-        <field name="infoString" type="text-medium" is-pk="true" />
+        <field name="infoString" type="text-medium"/>
     </entity>
 
     <!-- Entity for the Postal Address -->

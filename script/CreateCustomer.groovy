@@ -26,9 +26,6 @@ if (el == null) {
     partyroleEntity.set('partyId',pid)
     partyroleEntity.set('roleTypeEnumId','Customer')
     partyroleEntity.create()
-
-
-
     
     def personEntity = ec.entity.makeValue('Person')
     personEntity.set('partyId', pid)
@@ -49,4 +46,6 @@ if (el == null) {
     partyContactMechentity.set('contactMechPurposeEnumId', 'EmailPrimary')
     partyContactMechentity.set('fromDate', currentDate)
     partyContactMechentity.create()
+
+    context.datalist=pid
 }
